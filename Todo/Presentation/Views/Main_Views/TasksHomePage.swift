@@ -39,7 +39,7 @@ struct TasksHomePage: View {
                                 endPoint: .bottomTrailing
                             ))
                         .clipShape(Circle())
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(.systemBackground))
                         .padding(.horizontal)
                 }
             }

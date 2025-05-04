@@ -15,6 +15,17 @@ struct NewTaskView: View {
     @State private var taskDate: Date
     @State private var showAlert = false
     @Environment(\.dismiss) var dismiss
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    var textColorBW: Color {
+        colorScheme == .dark ? .white : .black
+    }
+    
+    var textColorWB: Color {
+        colorScheme == .light ? .white : .black
+    }
+
 
     init(selectedDate: Date, saveTask: @escaping (Task) -> ()) {
         self.selectedDate = selectedDate

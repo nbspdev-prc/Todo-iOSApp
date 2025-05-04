@@ -14,6 +14,7 @@ struct TaskListItem: View {
     var onLongPress: (Task) -> ()
     @State private var isPressed = false
     
+    
     var deleteAlert: Alert {
         Alert(title: Text("Hey!"),
               message: Text("Are you sure you want to delete this task?"),
@@ -26,12 +27,10 @@ struct TaskListItem: View {
             Circle()
                 .fill(.gray.opacity(0.1))
                 .frame(width: 25, height: 25)
-                .background(.white.shadow(.drop(color:
-                        .black.opacity(0.1), radius: 3)), in:.circle)
                 .overlay {
                     Circle()
                         .fill(task.isCompleted ?
-                              Color(hex: "#5D9C8F") : Color(hex: "#E63946").opacity(0.65))
+                              Color(hex: "#5D9C8F") : Color(hex: "#E63946"))
                         .frame(width: 20, height: 20)
                         .shadow(radius: 1)
                 }
@@ -42,7 +41,7 @@ struct TaskListItem: View {
             }
             .padding()
             .background(task.isCompleted ?
-                        Color(hex: "#5D9C8F") : Color(hex: "#E63946").opacity(0.75))
+                        Color(hex: "#5D9C8F") : Color(hex: "#E63946"))
             .clipShape(.rect(cornerRadius: 10))
             .scaleEffect(isPressed ? 1.05 : 1.0)
             

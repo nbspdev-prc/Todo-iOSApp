@@ -11,6 +11,16 @@ struct DateHeaderView: View {
     @ObservedObject var viewModel: TasksHomePageViewModel
     @State private var displayName: String = "there"
     @State private var showHowToAlert = false
+    @Environment(\.colorScheme) var colorScheme
+    
+    var textColorBW: Color {
+        colorScheme == .dark ? .white : .black
+    }
+    
+    var textColorWB: Color {
+        colorScheme == .light ? .white : .black
+    }
+
     
     var dateText: String {
         if viewModel.selectedDate == Calendar.current.startOfDay(for: Date()) {
@@ -45,16 +55,16 @@ struct DateHeaderView: View {
     private func nameHeaderTextView() -> some View {
         HStack {
             VStack(alignment: .listRowSeparatorLeading, spacing: 0) {
-                Text("Ready to plan?")
+                Text("Let's plan!")
                     .font(.title)
-                    .foregroundColor(Color(hex: "#2C3E36"))
+                    .foregroundColor(textColorBW)
                     .fontWeight(.semibold)
                     .padding(4)
 
                 Text(dateText)
                     .font(.caption)
                     .fontWeight(.light)
-                    .foregroundColor(.black)
+                    .foregroundColor(textColorBW)
                     .padding(4)
             }
             
@@ -63,7 +73,7 @@ struct DateHeaderView: View {
                 Text(viewModel.selectedDate.monthYearToString())
                     .font(.system(size: 10))
                     .fontWeight(.heavy)
-                    .foregroundColor(.black)
+                    .foregroundColor(textColorBW)
                 
                 Button {
                     withAnimation(.linear(duration: 0.1)) {
@@ -73,7 +83,7 @@ struct DateHeaderView: View {
                     Text("How-To")
                         .font(.system(size: 16))
                         .fontWeight(.semibold)
-                        .foregroundColor(.white)
+                        .foregroundColor(textColorWB)
                         .padding(4)
                         .background(Color(hex: "e65c66"))
                         .cornerRadius(4)
@@ -83,8 +93,8 @@ struct DateHeaderView: View {
                 } message: {
                     Text("""
                     Tap '+' to add a task
-                    Tap a task to mark it as complete
                     Hold a task to delete it
+                    Tap a task to mark it as complete
                     You can also browse other weeks by swiping left or right and tapping the date you want.
                     """)
                 }

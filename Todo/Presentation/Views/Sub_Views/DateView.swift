@@ -11,6 +11,17 @@ struct DateView: View {
     @ObservedObject var viewModel: TasksHomePageViewModel
     var week: WeekModel
     
+    @Environment(\.colorScheme) var colorScheme
+    
+    var textColorBW: Color {
+        colorScheme == .dark ? .white : .black
+    }
+    
+    var textColorWB: Color {
+        colorScheme == .light ? .white : .black
+    }
+
+    
     var body: some View {
         HStack {
             ForEach(0..<7) { i in
@@ -20,7 +31,7 @@ struct DateView: View {
                         .fontWeight(week.dates[i] == week.referenceDate ? .semibold : .light)
                         .foregroundColor({
                             if week.dates[i] == week.referenceDate {
-                                return .white
+                                return Color(textColorWB)
                             } else {
                                 return Color(hex: "E63946")
                             }
@@ -34,7 +45,7 @@ struct DateView: View {
                         .font(.system(size: 16))
                         .fontWeight(week.dates[i] == week.referenceDate ? .bold : .light)
                         .frame(maxWidth: .infinity)
-                        .foregroundColor(week.dates[i] == week.referenceDate ? .white: .black)
+                        .foregroundColor(week.dates[i] == week.referenceDate ? Color(textColorWB): Color(textColorBW))
                 }
                 .frame(maxWidth: .infinity)
                 .padding(5)
@@ -42,7 +53,7 @@ struct DateView: View {
                     if week.dates[i] == week.referenceDate {
                         Color(hex: "5b8a7b")
                     } else {
-                        Color.clear
+                        Color(textColorWB)
                     }
                 }
                 .clipShape(.rect(cornerRadius: 10))
