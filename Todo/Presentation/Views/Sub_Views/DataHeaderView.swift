@@ -41,12 +41,6 @@ struct DateHeaderView: View {
                 }
                 .frame(height: 60, alignment: .top)
                 Divider()
-                HStack {
-                    Spacer()
-                    Text(viewModel.selectedDate.toString(format: "EEE, dd.MM.yyyy"))
-                        .font(.system(size: 10, design:. rounded))
-                        .foregroundColor(.gray)
-                }
             }
         }
     }
