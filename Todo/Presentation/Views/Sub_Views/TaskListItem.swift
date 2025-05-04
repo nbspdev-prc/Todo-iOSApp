@@ -12,6 +12,7 @@ struct TaskListItem: View {
     @State var showAlert = false
     var onPress: (Task) -> ()
     var onLongPress: (Task) -> ()
+    @State private var isPressed = false
     
     var deleteAlert: Alert {
         Alert(title: Text("Hey!"),
@@ -43,17 +44,32 @@ struct TaskListItem: View {
             .background(task.isCompleted ?
                         Color(hex: "#5D9C8F") : Color(hex: "#E63946").opacity(0.75))
             .clipShape(.rect(cornerRadius: 10))
+            .scaleEffect(isPressed ? 1.05 : 1.0)
             
             Spacer()
         }
+        
         .onTapGesture {
             withAnimation {
                 toggleTaskCompletion()
             }
         }
-        .onLongPressGesture {
-            self.showAlert = true
-        }
+        .simultaneousGesture(
+            DragGesture(minimumDistance: 0)
+                .onChanged { _ in isPressed = true }
+                .onEnded { _ in isPressed = false }
+        )
+        .gesture(
+            LongPressGesture(minimumDuration: 0.4)
+                .onEnded { _ in
+                    showAlert = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        isPressed = false
+                    }
+                }
+        )
+
+        .animation(.easeInOut(duration: 0.2), value: isPressed)
         .alert(isPresented: $showAlert) {
             deleteAlert
         }

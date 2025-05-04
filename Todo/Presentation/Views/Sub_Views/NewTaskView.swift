@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct NewTaskView: View {
+    var selectedDate: Date
     var saveTask: (Task) -> ()
+
     @State private var taskTitle: String = ""
-    @State private var taskDate: Date = .init()
+    @State private var taskDate: Date
     @State private var showAlert = false
     @Environment(\.dismiss) var dismiss
-    
+
+    init(selectedDate: Date, saveTask: @escaping (Task) -> ()) {
+        self.selectedDate = selectedDate
+        self.saveTask = saveTask
+        _taskDate = State(initialValue: selectedDate)
+    }
     
     var body: some View {
         VStack {
@@ -68,6 +75,9 @@ struct NewTaskView: View {
                     .clipShape(.rect(cornerRadius: 20))
                     .padding(.horizontal, 30)
             }
+        }
+        .onAppear {
+            taskDate = selectedDate
         }
         .ignoresSafeArea(edges: .top)
         .alert("Missing Title", isPresented: $showAlert) {

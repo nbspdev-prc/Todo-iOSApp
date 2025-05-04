@@ -45,9 +45,10 @@ struct TasksHomePage: View {
             }
         }
         .sheet(isPresented: $createNewTask) {
-            NewTaskView() { task in
+            NewTaskView(selectedDate: viewModel.selectedDate) { task in
                 viewModel.updateTaskList(task: task)
-            }.presentationDetents([.fraction(0.4)])
+            }
+            .presentationDetents([.fraction(0.4)])
         }
     }
 }
