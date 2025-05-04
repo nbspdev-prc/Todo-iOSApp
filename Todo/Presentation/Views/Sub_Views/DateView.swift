@@ -18,7 +18,13 @@ struct DateView: View {
                     Text(week.dates[i].toString(format: "EEE").uppercased())
                         .font(.system(size: 10))
                         .fontWeight(week.dates[i] == week.referenceDate ? .semibold : .light)
-                        .foregroundColor(week.dates[i] == week.referenceDate ? .white: .red)
+                        .foregroundColor({
+                            if week.dates[i] == week.referenceDate {
+                                return .white
+                            } else {
+                                return Color(hex: "E63946")
+                            }
+                        }())
                         .frame(maxWidth: .infinity)
                     
                     Spacer()
@@ -34,7 +40,7 @@ struct DateView: View {
                 .padding(5)
                 .background {
                     if week.dates[i] == week.referenceDate {
-                        Color(hex: "7B74EC")
+                        Color(hex: "5b8a7b")
                     } else {
                         Color.clear
                     }

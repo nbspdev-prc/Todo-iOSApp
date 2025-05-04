@@ -35,7 +35,7 @@ struct DateHeaderView: View {
             VStack(alignment: .listRowSeparatorLeading, spacing: 0) {
                 Text("Hi, Percy")
                     .font(.title)
-                    .foregroundColor(Color(hex: "#002765"))
+                    .foregroundColor(Color(hex: "#2C3E36"))
                     .fontWeight(.semibold)
                     .padding(4)
                 
@@ -64,7 +64,7 @@ struct DateHeaderView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(4)
-                        .background(Color(hex: "2d2791"))
+                        .background(Color(hex: "e65c66"))
                         .cornerRadius(4)
                 }
             }

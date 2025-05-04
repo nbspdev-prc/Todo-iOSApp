@@ -24,10 +24,11 @@ struct NewTaskView: View {
                 .frame(maxWidth: .infinity)
                 .background {
                     Rectangle()
-                        .fill(.gray.opacity(0.2))
+                        .fill(Color(hex: "A1C8B5").opacity(0.6))
                         .clipShape(.rect())
                 }
-            
+                .foregroundStyle(Color(hex: "2C3E36"))
+
             VStack {
                 TextField("Your task title", text: $taskTitle)
                     .padding(.top)
@@ -37,6 +38,8 @@ struct NewTaskView: View {
                         .font(.title3)
                     DatePicker("", selection: $taskDate, displayedComponents: .date)
                         .datePickerStyle(.compact)
+                        .foregroundStyle(Color(hex: "2C3E36"))
+
                 }
             }
             .padding(30)
@@ -57,9 +60,8 @@ struct NewTaskView: View {
                     .background(
                         LinearGradient(
                             gradient: Gradient(colors: [
-                                Color(hex: "f997b0"),
-                                Color(hex: "cab4fa")
-                            ]),
+                                Color(hex: "A1C8B5"),
+                                Color(hex: "71ad9a")]),
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         ))
@@ -67,6 +69,7 @@ struct NewTaskView: View {
                     .padding(.horizontal, 30)
             }
         }
+        .ignoresSafeArea(edges: .top)
         .alert("Missing Title", isPresented: $showAlert) {
             Button("OK", role:.cancel) {}
         } message: {
@@ -76,7 +79,5 @@ struct NewTaskView: View {
 }
 
 #Preview {
-    NewTaskView() { task in
-        
-    }
+    TasksHomePage(viewModel: TasksHomePageViewModel(dateUseCase: DateUseCase(dateRepository: DateRepository(dateDataProvider: DateDataProvider())), taskUseCase: TaskUseCase(taskRepository: TaskRepository(taskDataProvider: TaskDataProvider()))))
 }

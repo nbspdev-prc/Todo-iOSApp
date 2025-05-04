@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct TodoApp: App {
+    init() {
+        UIView.appearance().overrideUserInterfaceStyle = .light
+    }
+    
     var body: some Scene {
         WindowGroup {
             let dateUseCase = DateUseCase(dateRepository: DateRepository(dateDataProvider: DateDataProvider()))

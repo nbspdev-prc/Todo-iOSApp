@@ -33,9 +33,8 @@ struct TasksHomePage: View {
                         .background(
                             LinearGradient(
                                 gradient: Gradient(colors: [
-                                    Color(hex: "f997b0"),
-                                    Color(hex: "cab4fa")
-                                ]),
+                                    Color(hex: "A1C8B5"),
+                                    Color(hex: "527d6f")]),
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             ))

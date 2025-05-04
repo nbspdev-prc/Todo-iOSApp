@@ -30,18 +30,18 @@ struct TaskListItem: View {
                 .overlay {
                     Circle()
                         .fill(task.isCompleted ?
-                              Color(hex: "#ada7fa") : Color(hex: "#F997B0").opacity(0.75))
+                              Color(hex: "#5D9C8F") : Color(hex: "#E63946").opacity(0.65))
                         .frame(width: 20, height: 20)
                         .shadow(radius: 1)
                 }
             VStack {
                 Text(task.title)
                     .font(.system(size: 15, weight: .light))
-                    .foregroundColor(Color(hex: "#002765"))
+                    .foregroundColor(.white)
             }
             .padding()
             .background(task.isCompleted ?
-                        Color(hex: "#ada7fa") : Color(hex: "#F997B0").opacity(0.7))
+                        Color(hex: "#5D9C8F") : Color(hex: "#E63946").opacity(0.75))
             .clipShape(.rect(cornerRadius: 10))
             
             Spacer()
