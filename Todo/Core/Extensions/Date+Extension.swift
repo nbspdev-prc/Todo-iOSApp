@@ -14,6 +14,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func monthYearToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "LLLL yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
     func toString(format: String) -> String {
         let formatter = DateFormatter()
         formatter.calendar = Calendar.current

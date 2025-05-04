@@ -9,7 +9,19 @@ import SwiftUI
 
 struct DateHeaderView: View {
     @ObservedObject var viewModel: TasksHomePageViewModel
+    @State private var displayName: String = "there"
+    @State private var showHowToAlert = false
     
+    var dateText: String {
+        if viewModel.selectedDate == Calendar.current.startOfDay(for: Date()) {
+            return "What's up for today?"
+        } else if viewModel.selectedDate < Calendar.current.startOfDay(for: Date()) {
+            return "Checking unfinished tasks."
+        } else {
+            return "Planning for a different time?"
+        }
+    }
+                                                                  
     var body: some View {
         ZStack {
             VStack {
@@ -33,14 +45,13 @@ struct DateHeaderView: View {
     private func nameHeaderTextView() -> some View {
         HStack {
             VStack(alignment: .listRowSeparatorLeading, spacing: 0) {
-                Text("Hi, Percy")
+                Text("Ready to plan?")
                     .font(.title)
                     .foregroundColor(Color(hex: "#2C3E36"))
                     .fontWeight(.semibold)
                     .padding(4)
-                
-                Text(viewModel.selectedDate == Calendar.current.startOfDay(for: Date())
-                     ? "What's up for today?" : "Planning for a different time?")
+
+                Text(dateText)
                     .font(.caption)
                     .fontWeight(.light)
                     .foregroundColor(.black)
@@ -49,17 +60,17 @@ struct DateHeaderView: View {
             
             Spacer()
             VStack(alignment: .trailing) {
-                Text(viewModel.selectedDate.monthToString())
+                Text(viewModel.selectedDate.monthYearToString())
                     .font(.system(size: 10))
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
                 
                 Button {
                     withAnimation(.linear(duration: 0.1)) {
-                        
+                        showHowToAlert = true
                     }
                 } label: {
-                    Text("Today")
+                    Text("How-To")
                         .font(.system(size: 16))
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
@@ -67,8 +78,19 @@ struct DateHeaderView: View {
                         .background(Color(hex: "e65c66"))
                         .cornerRadius(4)
                 }
+                .alert("How to Use", isPresented: $showHowToAlert) {
+                    Button("Got it", role: .cancel) { }
+                } message: {
+                    Text("""
+                    Tap '+' to add a task
+                    Tap a task to mark it as complete
+                    Hold a task to delete it
+                    You can also browse other weeks by swiping left or right and tapping the date you want.
+                    """)
+                }
             }
         }
+        
     }
 }
 
