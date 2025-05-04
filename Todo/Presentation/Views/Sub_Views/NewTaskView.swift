@@ -61,7 +61,7 @@ struct NewTaskView: View {
                         LinearGradient(
                             gradient: Gradient(colors: [
                                 Color(hex: "A1C8B5"),
-                                Color(hex: "71ad9a")]),
+                                Color(hex: "527d6f")]),
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         ))
