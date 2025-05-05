@@ -55,9 +55,9 @@ The project is organized into the following directories:
    git clone https://github.com/your-repo/todo-list-app.git
 
 2. Open the Project in Xcode:
-```
-open Todo.xcodeproj
-```
+  ```
+  open Todo.xcodeproj
+  ```
 
 Acknowledgments
 This project is inspired by the @App Development Academy series "TODO List App -SwiftUI, Clean Archiltecture and MVVM but added change and featur" and has been extended with additional features and improvements to showcase advanced SwiftUI and Clean Architecture concepts.
