@@ -16,6 +16,20 @@ This project is part of the **App Development Academy** series: **TODO List App 
 - **Dark Mode Support**: Adapts to the system's color scheme.
 - **Alerts and Validations**: User-friendly alerts for missing task titles and confirmation dialogs for deletions.
 
+## Example
+
+<table>
+  <tr>
+    <td><img src="/IMG_5828.jpg" alt="Light mode - Add Task" width="300"/></td>
+    <td><img src="/IMG_5829.jpg" alt="Dark mode - Add Task" width="300"/></td>
+  </tr>
+  <tr>
+    <td align="center">Light Mode</td>
+    <td align="center">Dark Mode</td>
+  </tr>
+</table>
+
+
 ## Additional Changes and Features
 
 - **Custom Color Support**: Added a `Color+Extension` to support hex-based color initialization.
@@ -54,13 +68,11 @@ The project is organized into the following directories:
    ```bash
    git clone https://github.com/your-repo/todo-list-app.git
 
-2. Open the Project in Xcode:
-  ```
-  open Todo.xcodeproj
-  ```
+2. Open the Project in Xcode and follow this tutorial
+Check out the full tutorial that inspired this project:  
+[How to deploy Xcode app onto real iPhone (YouTube)](https://www.youtube.com/watch?v=blnXWaOK7i0)
+
 
 Acknowledgments
 This project is inspired by the @App Development Academy series "TODO List App -SwiftUI, Clean Archiltecture and MVVM" but added change and features and has been extended with additional features and improvements to showcase advanced SwiftUI and Clean Architecture concepts.
 
-<img src="path/to/IMG_5828.jpg" alt="Light mode - Add Task" width="300"/>
-<img src="path/to/IMG_5829.jpg" alt="Dark mode - Add Task" width="300"/>
