@@ -61,3 +61,6 @@ The project is organized into the following directories:
 
 Acknowledgments
 This project is inspired by the @App Development Academy series "TODO List App -SwiftUI, Clean Archiltecture and MVVM" but added change and features and has been extended with additional features and improvements to showcase advanced SwiftUI and Clean Architecture concepts.
+
+<img src="path/to/IMG_5828.jpg" alt="Light mode - Add Task" width="300"/>
+<img src="path/to/IMG_5829.jpg" alt="Dark mode - Add Task" width="300"/>
