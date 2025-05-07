@@ -37,7 +37,7 @@ struct NewTaskView: View {
         VStack {
             Text("Add new task")
                 .fontDesign(.rounded)
-                .font(.title2)
+                .font(.title3)
                 .padding(30)
                 .frame(maxWidth: .infinity)
                 .background {
@@ -46,21 +46,25 @@ struct NewTaskView: View {
                         .clipShape(.rect())
                 }
                 .foregroundStyle(Color(hex: "2C3E36"))
-
+            
             VStack {
-                TextField("Your task title", text: $taskTitle)
+                TextField("Input your task title", text: $taskTitle)
                     .padding(.top)
-
-                HStack(alignment: .center, spacing: 20) {
-                    Text("Timeline")
+                HStack() {
+                    Text("Date")
                         .font(.title3)
                     DatePicker("", selection: $taskDate, displayedComponents: .date)
                         .datePickerStyle(.compact)
                         .foregroundStyle(Color(hex: "2C3E36"))
+                }
 
+                HStack() {
+                    Text("Time")
+                        .font(.title3)
+                    DatePicker("", selection: $taskDate, displayedComponents: .hourAndMinute)
                 }
             }
-            .padding(30)
+            .padding(.horizontal, 25)
             
             Button {
                 if taskTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -90,7 +94,6 @@ struct NewTaskView: View {
         .onAppear {
             taskDate = selectedDate
         }
-        .ignoresSafeArea(edges: .top)
         .alert("Missing Title", isPresented: $showAlert) {
             Button("OK", role:.cancel) {}
         } message: {
@@ -100,5 +103,6 @@ struct NewTaskView: View {
 }
 
 #Preview {
-    TasksHomePage(viewModel: TasksHomePageViewModel(dateUseCase: DateUseCase(dateRepository: DateRepository(dateDataProvider: DateDataProvider())), taskUseCase: TaskUseCase(taskRepository: TaskRepository(taskDataProvider: TaskDataProvider()))))
+    NewTaskView(selectedDate: Date()) {task in
+    }
 }

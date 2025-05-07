@@ -63,6 +63,14 @@ extension TaskDataProvider: TaskDataProviderProtocal {
     }
 
     func getCurrentSelectedDateTasks(of date: Date) -> [Task] {
-        return getTaskList().filter { $0.date.toString(format: "EEEE, dd.MM.yyyy") == date.toString(format: "EEEE, dd.MM.yyyy") }.sorted { !$0.isCompleted && $1.isCompleted}
+        return getTaskList()
+            .filter { $0.date.toString(format: "EEEE, dd.MM.yyyy") == date.toString(format: "EEEE, dd.MM.yyyy") }
+            .sorted {
+                if $0.isCompleted == $1.isCompleted {
+                    return $0.date < $1.date
+                } else {
+                    return !$0.isCompleted && $1.isCompleted
+                }
+            }
     }
 }

@@ -46,6 +46,9 @@ struct TaskListItem: View {
             .scaleEffect(isPressed ? 1.05 : 1.0)
             
             Spacer()
+            Text(task.date.timeToString())
+                    .font(.caption)
+                    .foregroundColor(.gray)
         }
         
         .onTapGesture {

@@ -27,6 +27,12 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    func timeToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        return dateFormatter.string(from: self)
+    }
+    
     var yesterday: Date {
         Calendar.current.date(byAdding: .day, value: -1, to: self)!
     }
