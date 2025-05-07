@@ -1,13 +1,13 @@
 //
-//  TodoUITestsLaunchTests.swift
-//  TodoUITests
+//  NextUpUITestsLaunchTests.swift
+//  NextUpUITests
 //
 //  Created by Percy Pham on 2025-04-28.
 //
 
 import XCTest
 
-final class TodoUITestsLaunchTests: XCTestCase {
+final class NextUpUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

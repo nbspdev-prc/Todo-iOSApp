@@ -24,25 +24,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		655D03CF2DC0280500F49053 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		655D03DF2DC0280600F49053 /* TodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		655D03E92DC0280600F49053 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		655D03CF2DC0280500F49053 /* NextUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		655D03DF2DC0280600F49053 /* NextUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		655D03E92DC0280600F49053 /* NextUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		655D03D12DC0280500F49053 /* Todo */ = {
+		655D03D12DC0280500F49053 /* NextUp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Todo;
+			path = NextUp;
 			sourceTree = "<group>";
 		};
-		655D03E22DC0280600F49053 /* TodoTests */ = {
+		655D03E22DC0280600F49053 /* NextUpTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TodoTests;
+			path = NextUpTests;
 			sourceTree = "<group>";
 		};
-		655D03EC2DC0280600F49053 /* TodoUITests */ = {
+		655D03EC2DC0280600F49053 /* NextUpUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TodoUITests;
+			path = NextUpUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		655D03C62DC0280500F49053 = {
 			isa = PBXGroup;
 			children = (
-				655D03D12DC0280500F49053 /* Todo */,
-				655D03E22DC0280600F49053 /* TodoTests */,
-				655D03EC2DC0280600F49053 /* TodoUITests */,
+				655D03D12DC0280500F49053 /* NextUp */,
+				655D03E22DC0280600F49053 /* NextUpTests */,
+				655D03EC2DC0280600F49053 /* NextUpUITests */,
 				655D03D02DC0280500F49053 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		655D03D02DC0280500F49053 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				655D03CF2DC0280500F49053 /* Todo.app */,
-				655D03DF2DC0280600F49053 /* TodoTests.xctest */,
-				655D03E92DC0280600F49053 /* TodoUITests.xctest */,
+				655D03CF2DC0280500F49053 /* NextUp.app */,
+				655D03DF2DC0280600F49053 /* NextUpTests.xctest */,
+				655D03E92DC0280600F49053 /* NextUpUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		655D03CE2DC0280500F49053 /* Todo */ = {
+		655D03CE2DC0280500F49053 /* NextUp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 655D03F32DC0280600F49053 /* Build configuration list for PBXNativeTarget "Todo" */;
+			buildConfigurationList = 655D03F32DC0280600F49053 /* Build configuration list for PBXNativeTarget "NextUp" */;
 			buildPhases = (
 				655D03CB2DC0280500F49053 /* Sources */,
 				655D03CC2DC0280500F49053 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				655D03D12DC0280500F49053 /* Todo */,
+				655D03D12DC0280500F49053 /* NextUp */,
 			);
-			name = Todo;
+			name = NextUp;
 			packageProductDependencies = (
 			);
 			productName = Todo;
-			productReference = 655D03CF2DC0280500F49053 /* Todo.app */;
+			productReference = 655D03CF2DC0280500F49053 /* NextUp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		655D03DE2DC0280600F49053 /* TodoTests */ = {
+		655D03DE2DC0280600F49053 /* NextUpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 655D03F62DC0280600F49053 /* Build configuration list for PBXNativeTarget "TodoTests" */;
+			buildConfigurationList = 655D03F62DC0280600F49053 /* Build configuration list for PBXNativeTarget "NextUpTests" */;
 			buildPhases = (
 				655D03DB2DC0280600F49053 /* Sources */,
 				655D03DC2DC0280600F49053 /* Frameworks */,
@@ -131,18 +131,18 @@
 				655D03E12DC0280600F49053 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				655D03E22DC0280600F49053 /* TodoTests */,
+				655D03E22DC0280600F49053 /* NextUpTests */,
 			);
-			name = TodoTests;
+			name = NextUpTests;
 			packageProductDependencies = (
 			);
 			productName = TodoTests;
-			productReference = 655D03DF2DC0280600F49053 /* TodoTests.xctest */;
+			productReference = 655D03DF2DC0280600F49053 /* NextUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		655D03E82DC0280600F49053 /* TodoUITests */ = {
+		655D03E82DC0280600F49053 /* NextUpUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 655D03F92DC0280600F49053 /* Build configuration list for PBXNativeTarget "TodoUITests" */;
+			buildConfigurationList = 655D03F92DC0280600F49053 /* Build configuration list for PBXNativeTarget "NextUpUITests" */;
 			buildPhases = (
 				655D03E52DC0280600F49053 /* Sources */,
 				655D03E62DC0280600F49053 /* Frameworks */,
@@ -154,13 +154,13 @@
 				655D03EB2DC0280600F49053 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				655D03EC2DC0280600F49053 /* TodoUITests */,
+				655D03EC2DC0280600F49053 /* NextUpUITests */,
 			);
-			name = TodoUITests;
+			name = NextUpUITests;
 			packageProductDependencies = (
 			);
 			productName = TodoUITests;
-			productReference = 655D03E92DC0280600F49053 /* TodoUITests.xctest */;
+			productReference = 655D03E92DC0280600F49053 /* NextUpUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 655D03CA2DC0280500F49053 /* Build configuration list for PBXProject "Todo" */;
+			buildConfigurationList = 655D03CA2DC0280500F49053 /* Build configuration list for PBXProject "NextUp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				655D03CE2DC0280500F49053 /* Todo */,
-				655D03DE2DC0280600F49053 /* TodoTests */,
-				655D03E82DC0280600F49053 /* TodoUITests */,
+				655D03CE2DC0280500F49053 /* NextUp */,
+				655D03DE2DC0280600F49053 /* NextUpTests */,
+				655D03E82DC0280600F49053 /* NextUpUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		655D03E12DC0280600F49053 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 655D03CE2DC0280500F49053 /* Todo */;
+			target = 655D03CE2DC0280500F49053 /* NextUp */;
 			targetProxy = 655D03E02DC0280600F49053 /* PBXContainerItemProxy */;
 		};
 		655D03EB2DC0280600F49053 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 655D03CE2DC0280500F49053 /* Todo */;
+			target = 655D03CE2DC0280500F49053 /* NextUp */;
 			targetProxy = 655D03EA2DC0280600F49053 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -395,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Todo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NextUp/Preview Content\"";
 				DEVELOPMENT_TEAM = DMF3PHMU5D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "percypham279-gmail.com.Todo";
+				PRODUCT_BUNDLE_IDENTIFIER = "percypham279-gmail.com.NextUp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -424,7 +424,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Todo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NextUp/Preview Content\"";
 				DEVELOPMENT_TEAM = DMF3PHMU5D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -438,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "percypham279-gmail.com.Todo";
+				PRODUCT_BUNDLE_IDENTIFIER = "percypham279-gmail.com.NextUp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,7 +461,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Todo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Todo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NextUp";
 			};
 			name = Debug;
 		};
@@ -480,7 +480,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Todo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Todo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NextUp";
 			};
 			name = Release;
 		};
@@ -521,7 +521,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		655D03CA2DC0280500F49053 /* Build configuration list for PBXProject "Todo" */ = {
+		655D03CA2DC0280500F49053 /* Build configuration list for PBXProject "NextUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				655D03F12DC0280600F49053 /* Debug */,
@@ -530,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		655D03F32DC0280600F49053 /* Build configuration list for PBXNativeTarget "Todo" */ = {
+		655D03F32DC0280600F49053 /* Build configuration list for PBXNativeTarget "NextUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				655D03F42DC0280600F49053 /* Debug */,
@@ -539,7 +539,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		655D03F62DC0280600F49053 /* Build configuration list for PBXNativeTarget "TodoTests" */ = {
+		655D03F62DC0280600F49053 /* Build configuration list for PBXNativeTarget "NextUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				655D03F72DC0280600F49053 /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		655D03F92DC0280600F49053 /* Build configuration list for PBXNativeTarget "TodoUITests" */ = {
+		655D03F92DC0280600F49053 /* Build configuration list for PBXNativeTarget "NextUpUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				655D03FA2DC0280600F49053 /* Debug */,

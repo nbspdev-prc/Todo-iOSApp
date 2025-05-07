@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Todo
+//  NextUp
 //
 //  Created by Percy Pham on 2025-04-28.
 //

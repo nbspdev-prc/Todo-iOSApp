@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct TodoApp: App {    
+struct NextUpApp: App {    
     var body: some Scene {
         WindowGroup {
             let dateUseCase = DateUseCase(dateRepository: DateRepository(dateDataProvider: DateDataProvider()))
