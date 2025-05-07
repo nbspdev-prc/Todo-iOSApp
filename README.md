@@ -73,6 +73,7 @@ Check out the full tutorial that inspired this project:
 [How to deploy Xcode app onto real iPhone (YouTube)](https://www.youtube.com/watch?v=blnXWaOK7i0)
 
 
-Acknowledgments
+## Acknowledgments
+
 This project is inspired by the @App Development Academy series "TODO List App -SwiftUI, Clean Archiltecture and MVVM" but added change and features and has been extended with additional features and improvements to showcase advanced SwiftUI and Clean Architecture concepts.
 
