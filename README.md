@@ -1,4 +1,4 @@
-# TODO List App
+# NextUp
 
 This project is part of the **App Development Academy** series: **TODO List App - SwiftUI, Clean Architecture, and MVVM**. It demonstrates how to build a task management application using **SwiftUI**, following the principles of **Clean Architecture** and **MVVM** design patterns. The app has been enhanced with additional features and changes to improve functionality and user experience.
 
@@ -19,7 +19,7 @@ This project is part of the **App Development Academy** series: **TODO List App 
 ## Additional Changes and Features
 
 - **Custom Color Support**: Added a `Color+Extension` to support hex-based color initialization.
-- **Improved Date Handling**: Enhanced date navigation with `Date+Extension` for better formatting and calculations.
+- **Improved Date Handling**: Enhanced date navigation with `Date+Extension` for better formatting and calculations and time management.
 - **Interactive Animations**: Added animations for task interactions (e.g., scaling on tap).
 - **How-To Guide**: A built-in guide accessible via the "How-To" button in the header.
 - **Preview Support**: SwiftUI previews for all views to streamline development.
