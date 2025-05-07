@@ -60,4 +60,4 @@ The project is organized into the following directories:
   ```
 
 Acknowledgments
-This project is inspired by the @App Development Academy series "TODO List App -SwiftUI, Clean Archiltecture and MVVM but added change and featur" and has been extended with additional features and improvements to showcase advanced SwiftUI and Clean Architecture concepts.
+This project is inspired by the @App Development Academy series "TODO List App -SwiftUI, Clean Archiltecture and MVVM" but added change and features and has been extended with additional features and improvements to showcase advanced SwiftUI and Clean Architecture concepts.
