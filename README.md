@@ -72,6 +72,8 @@ The project is organized into the following directories:
 Check out the full tutorial that inspired this project:  
 [How to deploy Xcode app onto real iPhone (YouTube)](https://www.youtube.com/watch?v=blnXWaOK7i0)
 
+If you do 1 more app, I will by that $99/year developer account =))).
+
 
 ## Acknowledgments
 
